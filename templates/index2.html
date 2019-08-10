@@ -4,8 +4,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
 <body>
-    <div class=container>
-    <p>Enter a zipcode<p>
+    <div class=container-fluid>
     <form method="POST">
         <input name="location">
         <input type="submit">
@@ -41,20 +40,20 @@
                         
                     </div>
                     <div class="col-md-6">
-                        <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg">
+                        <img alt="Bootstrap Image Preview" src="{{ icon }}">
                     </div>
                 </div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>
+                                Date
+                            </th>
+                            <th>
                                 High Temp (F)
                             </th>
                             <th>
                                 Low Temp (F)
-                            </th>
-                            <th>
-                                Date
                             </th>
                             <th>
                                 Description
@@ -68,15 +67,15 @@
                         {% for item in json["daily"]["data"] %}
                         <tr>
                             <td>
+                                {{item["time"]}}
+                            </td>
+                            <td>
                                 {{item["temperatureHigh"]}}
                             </td>
                             <td>
                                 {{item["temperatureLow"]}}
-                            </td>
-                            <td>
-                                {{item["time"]}}
-                            </td>
-                            <td>
+                            </td>                          
+                            <td><img alt="Image Preview" src="{{url_for('static', filename='{}.png'.format(item["icon"]))}}">
                                 {{item["summary"]}}
                             </td>
                             <td>

@@ -1,6 +1,6 @@
 import requests
 import APIKEY
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, url_for
 from datetime import datetime
 
 def callAPI(latlon = [37.8267,-122.4233]):
@@ -32,8 +32,10 @@ def my_form_post():
     for forecast in json["daily"]["data"]:
         forecast["temperatureHigh"] = int(round(forecast["temperatureHigh"]))
         forecast["temperatureLow"] = int(round(forecast["temperatureLow"]))
-        forecast["time"] = datetime.utcfromtimestamp(forecast["time"]).strftime('%Y-%m-%d %H:%M:%S')
-    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson)
+        forecast["time"] = datetime.utcfromtimestamp(forecast["time"]).ctime()
+        forecast["time"] = forecast["time"][:10] + forecast["time"][19:]
+    icon = url_for('static', filename='{}.png'.format(json["currently"]["icon"]))
+    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon)
 
 if __name__ == '__main__':
     app.run(debug=True)
