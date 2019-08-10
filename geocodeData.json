@@ -1,1 +1,455 @@
-{"documentation":"https://opencagedata.com/api","licenses":[{"name":"see attribution guide","url":"https://opencagedata.com/credits"}],"rate":{"limit":2500,"remaining":2498,"reset":1565481600},"results":[{"annotations":{"DMS":{"lat":"33\u00b0 10' 37.47792'' N","lng":"117\u00b0 6' 21.34476'' W"},"FIPS":{"county":"06073","state":"06"},"MGRS":"11SMS9012470923","Maidenhead":"DM13ke72gl","Mercator":{"x":-13036172.401,"y":3895450.646},"OSM":{"url":"https://www.openstreetmap.org/?mlat=33.17708&mlon=-117.10593#map=16/33.17708/-117.10593"},"UN_M49":{"regions":{"AMERICAS":"019","NORTHERN_AMERICA":"021","US":"840","WORLD":"001"},"statistical_groupings":["MEDC"]},"callingcode":1,"currency":{"alternate_symbols":["US$"],"decimal_mark":".","disambiguate_symbol":"US$","html_entity":"$","iso_code":"USD","iso_numeric":"840","name":"United States Dollar","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"$","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\uddfa\ud83c\uddf8","geohash":"9musxpwn6p6q3z0fs6ge","qibla":25.22,"roadinfo":{"drive_on":"right","speed_in":"mph"},"sun":{"rise":{"apparent":1565442420,"astronomical":1565436960,"civil":1565440860,"nautical":1565438940},"set":{"apparent":1565404620,"astronomical":1565410080,"civil":1565406240,"nautical":1565408100}},"timezone":{"name":"America/Los_Angeles","now_in_dst":1,"offset_sec":-25200,"offset_string":"-0700","short_name":"PDT"},"what3words":{"words":"rambler.tonsils.regret"}},"bounds":{"northeast":{"lat":33.1771272,"lng":-117.1058791},"southwest":{"lat":33.1770272,"lng":-117.1059791}},"components":{"ISO_3166-1_alpha-2":"US","ISO_3166-1_alpha-3":"USA","_type":"county","continent":"North America","country":"USA","country_code":"us","county":"San Diego County","postcode":"92026","state":"California","state_code":"CA"},"confidence":9,"formatted":"San Diego County, CA 92026, United States of America","geometry":{"lat":33.1770772,"lng":-117.1059291}},{"annotations":{"DMS":{"lat":"37\u00b0 18' 46.46376'' N","lng":"13\u00b0 39' 39.72888'' E"},"MGRS":"33SUB8135130425","Maidenhead":"JM67th95hc","Mercator":{"x":1520739.551,"y":4456908.948},"OSM":{"url":"https://www.openstreetmap.org/?mlat=37.31291&mlon=13.66104#map=16/37.31291/13.66104"},"UN_M49":{"regions":{"EUROPE":"150","IT":"380","SOUTHERN_EUROPE":"039","WORLD":"001"},"statistical_groupings":["MEDC"]},"callingcode":39,"currency":{"alternate_symbols":[],"decimal_mark":",","html_entity":"&#x20AC;","iso_code":"EUR","iso_numeric":"978","name":"Euro","smallest_denomination":1,"subunit":"Cent","subunit_to_unit":100,"symbol":"\u20ac","symbol_first":1,"thousands_separator":"."},"flag":"\ud83c\uddee\ud83c\uddf9","geohash":"sq9sqbeemjytg6xrsgcf","qibla":117.75,"roadinfo":{"drive_on":"right","speed_in":"km/h"},"sun":{"rise":{"apparent":1565410680,"astronomical":1565404740,"civil":1565408940,"nautical":1565406900},"set":{"apparent":1565460240,"astronomical":1565466120,"civil":1565461920,"nautical":1565463960}},"timezone":{"name":"Europe/Rome","now_in_dst":1,"offset_sec":7200,"offset_string":"+0200","short_name":"CEST"},"what3words":{"words":"awoken.calm.carver"}},"bounds":{"northeast":{"lat":37.3129566,"lng":13.6610858},"southwest":{"lat":37.3128566,"lng":13.6609858}},"components":{"ISO_3166-1_alpha-2":"IT","ISO_3166-1_alpha-3":"ITA","_type":"city","city":"Favara","continent":"Europe","country":"Italy","country_code":"it","political_union":"European Union","postcode":"92026","state":"Sicily"},"confidence":9,"formatted":"92026 Favara, Italy","geometry":{"lat":37.3129066,"lng":13.6610358}},{"annotations":{"DMS":{"lat":"48\u00b0 25' 55.60752'' N","lng":"39\u00b0 11' 59.53596'' E"},"MGRS":"37UEP1478464348","Maidenhead":"KN98ok33xq","Mercator":{"x":4363709.693,"y":6147061.404},"OSM":{"url":"https://www.openstreetmap.org/?mlat=48.43211&mlon=39.19987#map=16/48.43211/39.19987"},"UN_M49":{"regions":{"EASTERN_EUROPE":"151","EUROPE":"150","UA":"804","WORLD":"001"},"statistical_groupings":["LEDC"]},"callingcode":380,"currency":{"alternate_symbols":[],"decimal_mark":".","html_entity":"&#x20B4;","iso_code":"UAH","iso_numeric":"980","name":"Ukrainian Hryvnia","smallest_denomination":1,"subunit":"Kopiyka","subunit_to_unit":100,"symbol":"\u20b4","symbol_first":0,"thousands_separator":","},"flag":"\ud83c\uddfa\ud83c\udde6","geohash":"ubegs0b3x0q2qr7jdnz9","qibla":178.72,"roadinfo":{"drive_on":"right","speed_in":"km/h"},"sun":{"rise":{"apparent":1565403000,"astronomical":1565481420,"civil":1565400900,"nautical":1565398200},"set":{"apparent":1565455620,"astronomical":1565463540,"civil":1565457720,"nautical":1565460420}},"timezone":{"name":"Europe/Kiev","now_in_dst":1,"offset_sec":10800,"offset_string":"+0300","short_name":"EEST"},"what3words":{"words":"consisted.diffidence.vacates"}},"bounds":{"northeast":{"lat":48.4321632,"lng":39.1999211},"southwest":{"lat":48.4320632,"lng":39.1998211}},"components":{"ISO_3166-1_alpha-2":"UA","ISO_3166-1_alpha-3":"UKR","_type":"neighbourhood","city_district":"Cheliuskinets","continent":"Europe","country":"Ukraine","country_code":"ua","postcode":"92026","state":"Luhansk Oblast"},"confidence":9,"formatted":"Cheliuskinets, Luhansk Oblast, 92026, Ukraine","geometry":{"lat":48.4321132,"lng":39.1998711}},{"annotations":{"DMS":{"lat":"51\u00b0 35' 44.52792'' N","lng":"0\u00b0 14' 41.67168'' E"},"MGRS":"30UXC9082019669","Maidenhead":"IO91vo02ox","Mercator":{"x":-27263.123,"y":6693844.909},"OSM":{"edit_url":"https://www.openstreetmap.org/edit?node=5910593724#map=16/51.59570/-0.24491","url":"https://www.openstreetmap.org/?mlat=51.59570&mlon=-0.24491#map=16/51.59570/-0.24491"},"UN_M49":{"regions":{"EUROPE":"150","GB":"826","NORTHERN_EUROPE":"154","WORLD":"001"},"statistical_groupings":["MEDC"]},"callingcode":44,"currency":{"alternate_symbols":[],"decimal_mark":".","html_entity":"&#x00A3;","iso_code":"GBP","iso_numeric":"826","name":"British Pound","smallest_denomination":1,"subunit":"Penny","subunit_to_unit":100,"symbol":"\u00a3","symbol_first":1,"thousands_separator":","},"flag":"\ud83c\uddec\ud83c\udde7","geohash":"gcpvd2twv0nb0mmp4hgv","qibla":118.94,"roadinfo":{"drive_on":"left","road":"Aerodrome Road","road_type":"bus_stop","speed_in":"mph"},"sun":{"rise":{"apparent":1565411880,"astronomical":1565402760,"civil":1565409600,"nautical":1565406540},"set":{"apparent":1565465580,"astronomical":1565474640,"civil":1565467920,"nautical":1565470860}},"timezone":{"name":"Europe/London","now_in_dst":1,"offset_sec":3600,"offset_string":"+0100","short_name":"BST"},"what3words":{"words":"dance.tight.storm"}},"bounds":{"northeast":{"lat":51.5957522,"lng":-0.2448588},"southwest":{"lat":51.5956522,"lng":-0.2449588}},"components":{"ISO_3166-1_alpha-2":"GB","ISO_3166-1_alpha-3":"GBR","_type":"bus_stop","bus_stop":"Peel Centre","city":"London","continent":"Europe","country":"United Kingdom","country_code":"gb","county":"London Borough of Barnet","political_union":"European Union","postcode":"NW9 5UZ","residential":"Beaufort Park","road":"Aerodrome Road","road_type":"bus_stop","state":"England","state_code":"ENG","state_district":"Greater London","suburb":"Hendon, The Hyde"},"confidence":9,"formatted":"Peel Centre, Aerodrome Road, London NW9 5UZ, United Kingdom","geometry":{"lat":51.5957022,"lng":-0.2449088}}],"status":{"code":200,"message":"OK"},"stay_informed":{"blog":"https://blog.opencagedata.com","twitter":"https://twitter.com/opencagedata"},"thanks":"For using an OpenCage API","timestamp":{"created_http":"Sat, 10 Aug 2019 01:30:38 GMT","created_unix":1565400638},"total_results":4}
+{
+    "documentation": "https://opencagedata.com/api",
+    "licenses": [
+        {
+            "name": "see attribution guide",
+            "url": "https://opencagedata.com/credits"
+        }
+    ],
+    "rate": {
+        "limit": 2500,
+        "remaining": 2498,
+        "reset": 1565481600
+    },
+    "results": [
+        {
+            "annotations": {
+                "DMS": {
+                    "lat": "33° 10' 37.47792'' N",
+                    "lng": "117° 6' 21.34476'' W"
+                },
+                "FIPS": {
+                    "county": "06073",
+                    "state": "06"
+                },
+                "MGRS": "11SMS9012470923",
+                "Maidenhead": "DM13ke72gl",
+                "Mercator": {
+                    "x": -13036172.401,
+                    "y": 3895450.646
+                },
+                "OSM": {
+                    "url": "https://www.openstreetmap.org/?mlat=33.17708&mlon=-117.10593#map=16/33.17708/-117.10593"
+                },
+                "UN_M49": {
+                    "regions": {
+                        "AMERICAS": "019",
+                        "NORTHERN_AMERICA": "021",
+                        "US": "840",
+                        "WORLD": "001"
+                    },
+                    "statistical_groupings": [
+                        "MEDC"
+                    ]
+                },
+                "callingcode": 1,
+                "currency": {
+                    "alternate_symbols": [
+                        "US$"
+                    ],
+                    "decimal_mark": ".",
+                    "disambiguate_symbol": "US$",
+                    "html_entity": "$",
+                    "iso_code": "USD",
+                    "iso_numeric": "840",
+                    "name": "United States Dollar",
+                    "smallest_denomination": 1,
+                    "subunit": "Cent",
+                    "subunit_to_unit": 100,
+                    "symbol": "$",
+                    "symbol_first": 1,
+                    "thousands_separator": ","
+                },
+                "flag": "🇺🇸",
+                "geohash": "9musxpwn6p6q3z0fs6ge",
+                "qibla": 25.22,
+                "roadinfo": {
+                    "drive_on": "right",
+                    "speed_in": "mph"
+                },
+                "sun": {
+                    "rise": {
+                        "apparent": 1565442420,
+                        "astronomical": 1565436960,
+                        "civil": 1565440860,
+                        "nautical": 1565438940
+                    },
+                    "set": {
+                        "apparent": 1565404620,
+                        "astronomical": 1565410080,
+                        "civil": 1565406240,
+                        "nautical": 1565408100
+                    }
+                },
+                "timezone": {
+                    "name": "America/Los_Angeles",
+                    "now_in_dst": 1,
+                    "offset_sec": -25200,
+                    "offset_string": "-0700",
+                    "short_name": "PDT"
+                },
+                "what3words": {
+                    "words": "rambler.tonsils.regret"
+                }
+            },
+            "bounds": {
+                "northeast": {
+                    "lat": 33.1771272,
+                    "lng": -117.1058791
+                },
+                "southwest": {
+                    "lat": 33.1770272,
+                    "lng": -117.1059791
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "US",
+                "ISO_3166-1_alpha-3": "USA",
+                "_type": "county",
+                "continent": "North America",
+                "country": "USA",
+                "country_code": "us",
+                "county": "San Diego County",
+                "postcode": "92026",
+                "state": "California",
+                "state_code": "CA"
+            },
+            "confidence": 9,
+            "formatted": "San Diego County, CA 92026, United States of America",
+            "geometry": {
+                "lat": 33.1770772,
+                "lng": -117.1059291
+            }
+        },
+        {
+            "annotations": {
+                "DMS": {
+                    "lat": "37° 18' 46.46376'' N",
+                    "lng": "13° 39' 39.72888'' E"
+                },
+                "MGRS": "33SUB8135130425",
+                "Maidenhead": "JM67th95hc",
+                "Mercator": {
+                    "x": 1520739.551,
+                    "y": 4456908.948
+                },
+                "OSM": {
+                    "url": "https://www.openstreetmap.org/?mlat=37.31291&mlon=13.66104#map=16/37.31291/13.66104"
+                },
+                "UN_M49": {
+                    "regions": {
+                        "EUROPE": "150",
+                        "IT": "380",
+                        "SOUTHERN_EUROPE": "039",
+                        "WORLD": "001"
+                    },
+                    "statistical_groupings": [
+                        "MEDC"
+                    ]
+                },
+                "callingcode": 39,
+                "currency": {
+                    "alternate_symbols": [],
+                    "decimal_mark": ",",
+                    "html_entity": "&#x20AC;",
+                    "iso_code": "EUR",
+                    "iso_numeric": "978",
+                    "name": "Euro",
+                    "smallest_denomination": 1,
+                    "subunit": "Cent",
+                    "subunit_to_unit": 100,
+                    "symbol": "€",
+                    "symbol_first": 1,
+                    "thousands_separator": "."
+                },
+                "flag": "🇮🇹",
+                "geohash": "sq9sqbeemjytg6xrsgcf",
+                "qibla": 117.75,
+                "roadinfo": {
+                    "drive_on": "right",
+                    "speed_in": "km/h"
+                },
+                "sun": {
+                    "rise": {
+                        "apparent": 1565410680,
+                        "astronomical": 1565404740,
+                        "civil": 1565408940,
+                        "nautical": 1565406900
+                    },
+                    "set": {
+                        "apparent": 1565460240,
+                        "astronomical": 1565466120,
+                        "civil": 1565461920,
+                        "nautical": 1565463960
+                    }
+                },
+                "timezone": {
+                    "name": "Europe/Rome",
+                    "now_in_dst": 1,
+                    "offset_sec": 7200,
+                    "offset_string": "+0200",
+                    "short_name": "CEST"
+                },
+                "what3words": {
+                    "words": "awoken.calm.carver"
+                }
+            },
+            "bounds": {
+                "northeast": {
+                    "lat": 37.3129566,
+                    "lng": 13.6610858
+                },
+                "southwest": {
+                    "lat": 37.3128566,
+                    "lng": 13.6609858
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "IT",
+                "ISO_3166-1_alpha-3": "ITA",
+                "_type": "city",
+                "city": "Favara",
+                "continent": "Europe",
+                "country": "Italy",
+                "country_code": "it",
+                "political_union": "European Union",
+                "postcode": "92026",
+                "state": "Sicily"
+            },
+            "confidence": 9,
+            "formatted": "92026 Favara, Italy",
+            "geometry": {
+                "lat": 37.3129066,
+                "lng": 13.6610358
+            }
+        },
+        {
+            "annotations": {
+                "DMS": {
+                    "lat": "48° 25' 55.60752'' N",
+                    "lng": "39° 11' 59.53596'' E"
+                },
+                "MGRS": "37UEP1478464348",
+                "Maidenhead": "KN98ok33xq",
+                "Mercator": {
+                    "x": 4363709.693,
+                    "y": 6147061.404
+                },
+                "OSM": {
+                    "url": "https://www.openstreetmap.org/?mlat=48.43211&mlon=39.19987#map=16/48.43211/39.19987"
+                },
+                "UN_M49": {
+                    "regions": {
+                        "EASTERN_EUROPE": "151",
+                        "EUROPE": "150",
+                        "UA": "804",
+                        "WORLD": "001"
+                    },
+                    "statistical_groupings": [
+                        "LEDC"
+                    ]
+                },
+                "callingcode": 380,
+                "currency": {
+                    "alternate_symbols": [],
+                    "decimal_mark": ".",
+                    "html_entity": "&#x20B4;",
+                    "iso_code": "UAH",
+                    "iso_numeric": "980",
+                    "name": "Ukrainian Hryvnia",
+                    "smallest_denomination": 1,
+                    "subunit": "Kopiyka",
+                    "subunit_to_unit": 100,
+                    "symbol": "₴",
+                    "symbol_first": 0,
+                    "thousands_separator": ","
+                },
+                "flag": "🇺🇦",
+                "geohash": "ubegs0b3x0q2qr7jdnz9",
+                "qibla": 178.72,
+                "roadinfo": {
+                    "drive_on": "right",
+                    "speed_in": "km/h"
+                },
+                "sun": {
+                    "rise": {
+                        "apparent": 1565403000,
+                        "astronomical": 1565481420,
+                        "civil": 1565400900,
+                        "nautical": 1565398200
+                    },
+                    "set": {
+                        "apparent": 1565455620,
+                        "astronomical": 1565463540,
+                        "civil": 1565457720,
+                        "nautical": 1565460420
+                    }
+                },
+                "timezone": {
+                    "name": "Europe/Kiev",
+                    "now_in_dst": 1,
+                    "offset_sec": 10800,
+                    "offset_string": "+0300",
+                    "short_name": "EEST"
+                },
+                "what3words": {
+                    "words": "consisted.diffidence.vacates"
+                }
+            },
+            "bounds": {
+                "northeast": {
+                    "lat": 48.4321632,
+                    "lng": 39.1999211
+                },
+                "southwest": {
+                    "lat": 48.4320632,
+                    "lng": 39.1998211
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "UA",
+                "ISO_3166-1_alpha-3": "UKR",
+                "_type": "neighbourhood",
+                "city_district": "Cheliuskinets",
+                "continent": "Europe",
+                "country": "Ukraine",
+                "country_code": "ua",
+                "postcode": "92026",
+                "state": "Luhansk Oblast"
+            },
+            "confidence": 9,
+            "formatted": "Cheliuskinets, Luhansk Oblast, 92026, Ukraine",
+            "geometry": {
+                "lat": 48.4321132,
+                "lng": 39.1998711
+            }
+        },
+        {
+            "annotations": {
+                "DMS": {
+                    "lat": "51° 35' 44.52792'' N",
+                    "lng": "0° 14' 41.67168'' E"
+                },
+                "MGRS": "30UXC9082019669",
+                "Maidenhead": "IO91vo02ox",
+                "Mercator": {
+                    "x": -27263.123,
+                    "y": 6693844.909
+                },
+                "OSM": {
+                    "edit_url": "https://www.openstreetmap.org/edit?node=5910593724#map=16/51.59570/-0.24491",
+                    "url": "https://www.openstreetmap.org/?mlat=51.59570&mlon=-0.24491#map=16/51.59570/-0.24491"
+                },
+                "UN_M49": {
+                    "regions": {
+                        "EUROPE": "150",
+                        "GB": "826",
+                        "NORTHERN_EUROPE": "154",
+                        "WORLD": "001"
+                    },
+                    "statistical_groupings": [
+                        "MEDC"
+                    ]
+                },
+                "callingcode": 44,
+                "currency": {
+                    "alternate_symbols": [],
+                    "decimal_mark": ".",
+                    "html_entity": "&#x00A3;",
+                    "iso_code": "GBP",
+                    "iso_numeric": "826",
+                    "name": "British Pound",
+                    "smallest_denomination": 1,
+                    "subunit": "Penny",
+                    "subunit_to_unit": 100,
+                    "symbol": "£",
+                    "symbol_first": 1,
+                    "thousands_separator": ","
+                },
+                "flag": "🇬🇧",
+                "geohash": "gcpvd2twv0nb0mmp4hgv",
+                "qibla": 118.94,
+                "roadinfo": {
+                    "drive_on": "left",
+                    "road": "Aerodrome Road",
+                    "road_type": "bus_stop",
+                    "speed_in": "mph"
+                },
+                "sun": {
+                    "rise": {
+                        "apparent": 1565411880,
+                        "astronomical": 1565402760,
+                        "civil": 1565409600,
+                        "nautical": 1565406540
+                    },
+                    "set": {
+                        "apparent": 1565465580,
+                        "astronomical": 1565474640,
+                        "civil": 1565467920,
+                        "nautical": 1565470860
+                    }
+                },
+                "timezone": {
+                    "name": "Europe/London",
+                    "now_in_dst": 1,
+                    "offset_sec": 3600,
+                    "offset_string": "+0100",
+                    "short_name": "BST"
+                },
+                "what3words": {
+                    "words": "dance.tight.storm"
+                }
+            },
+            "bounds": {
+                "northeast": {
+                    "lat": 51.5957522,
+                    "lng": -0.2448588
+                },
+                "southwest": {
+                    "lat": 51.5956522,
+                    "lng": -0.2449588
+                }
+            },
+            "components": {
+                "ISO_3166-1_alpha-2": "GB",
+                "ISO_3166-1_alpha-3": "GBR",
+                "_type": "bus_stop",
+                "bus_stop": "Peel Centre",
+                "city": "London",
+                "continent": "Europe",
+                "country": "United Kingdom",
+                "country_code": "gb",
+                "county": "London Borough of Barnet",
+                "political_union": "European Union",
+                "postcode": "NW9 5UZ",
+                "residential": "Beaufort Park",
+                "road": "Aerodrome Road",
+                "road_type": "bus_stop",
+                "state": "England",
+                "state_code": "ENG",
+                "state_district": "Greater London",
+                "suburb": "Hendon, The Hyde"
+            },
+            "confidence": 9,
+            "formatted": "Peel Centre, Aerodrome Road, London NW9 5UZ, United Kingdom",
+            "geometry": {
+                "lat": 51.5957022,
+                "lng": -0.2449088
+            }
+        }
+    ],
+    "status": {
+        "code": 200,
+        "message": "OK"
+    },
+    "stay_informed": {
+        "blog": "https://blog.opencagedata.com",
+        "twitter": "https://twitter.com/opencagedata"
+    },
+    "thanks": "For using an OpenCage API",
+    "timestamp": {
+        "created_http": "Sat, 10 Aug 2019 01:30:38 GMT",
+        "created_unix": 1565400638
+    },
+    "total_results": 4
+}
