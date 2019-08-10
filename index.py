@@ -35,7 +35,8 @@ def my_form_post():
         forecast["time"] = datetime.utcfromtimestamp(forecast["time"]).ctime()
         forecast["time"] = forecast["time"][:10] + forecast["time"][19:]
     icon = url_for('static', filename='{}.png'.format(json["currently"]["icon"]))
-    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon)
+    zipped = zip(json["daily"]["data"], range(len(json["daily"]["data"])))
+    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, zipped = zipped)
 
 if __name__ == '__main__':
     app.run(debug=True)
