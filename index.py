@@ -1,6 +1,7 @@
 import requests
 import APIKEY
 from flask import Flask, request, render_template
+from datetime import datetime
 
 def callAPI(latlon = [37.8267,-122.4233]):
     url = "https://api.darksky.net/forecast/{}/{},{}".format(APIKEY.key, latlon[0], latlon[1])
@@ -28,6 +29,10 @@ def my_form_post():
     latlon = getLatLon(location)
     geocodeJson = latlon[2]
     json = callAPI(latlon)
+    for forecast in json["daily"]["data"]:
+        forecast["temperatureHigh"] = int(round(forecast["temperatureHigh"]))
+        forecast["temperatureLow"] = int(round(forecast["temperatureLow"]))
+        forecast["time"] = datetime.utcfromtimestamp(forecast["time"]).strftime('%Y-%m-%d %H:%M:%S')
     return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson)
 
 if __name__ == '__main__':

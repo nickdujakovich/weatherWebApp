@@ -17,15 +17,28 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3>
-                            {{geocodeJson["results"][0]["formatted"]}}
-                        </h3>
-                        <p>
-                            {{json["currently"]["summary"]}}
-                        </p>
-                        <p>
-                            {{json["currently"]["temperature"]}}°F
-                        </p>
+                        <table>
+                        <tr>
+                            <td class="align-baseline">
+                                    <h1>
+                                        {{geocodeJson["results"][0]["formatted"]}}
+                                    </h1>
+                            </td>
+                            <td class="align-text-top" style="padding-left: 5px">
+                                    <p>
+                                        {{json["currently"]["temperature"]}}°F
+                                    </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h4>
+                                    {{json["currently"]["summary"]}}
+                                </h4>
+                            </td>
+                        </tr>
+                        </table>
+                        
                     </div>
                     <div class="col-md-6">
                         <img alt="Bootstrap Image Preview" src="https://www.layoutit.com/img/sports-q-c-140-140-3.jpg">
@@ -35,90 +48,42 @@
                     <thead>
                         <tr>
                             <th>
-                                #
+                                High Temp (F)
                             </th>
                             <th>
-                                Product
+                                Low Temp (F)
                             </th>
                             <th>
-                                Payment Taken
+                                Date
                             </th>
                             <th>
-                                Status
+                                Description
+                            </th>
+                            <th>
+                                UV Index
                             </th>
                         </tr>
                     </thead>
                     <tbody>
+                        {% for item in json["daily"]["data"] %}
                         <tr>
                             <td>
-                                1
+                                {{item["temperatureHigh"]}}
                             </td>
                             <td>
-                                TB - Monthly
+                                {{item["temperatureLow"]}}
                             </td>
                             <td>
-                                01/04/2012
+                                {{item["time"]}}
                             </td>
                             <td>
-                                Default
+                                {{item["summary"]}}
+                            </td>
+                            <td>
+                                    {{item["uvIndex"]}}
                             </td>
                         </tr>
-                        <tr class="table-active">
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                01/04/2012
-                            </td>
-                            <td>
-                                Approved
-                            </td>
-                        </tr>
-                        <tr class="table-success">
-                            <td>
-                                2
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                02/04/2012
-                            </td>
-                            <td>
-                                Declined
-                            </td>
-                        </tr>
-                        <tr class="table-warning">
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                03/04/2012
-                            </td>
-                            <td>
-                                Pending
-                            </td>
-                        </tr>
-                        <tr class="table-danger">
-                            <td>
-                                4
-                            </td>
-                            <td>
-                                TB - Monthly
-                            </td>
-                            <td>
-                                04/04/2012
-                            </td>
-                            <td>
-                                Call in to confirm
-                            </td>
-                        </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
