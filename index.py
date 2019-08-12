@@ -1,7 +1,7 @@
 import requests
 import APIKEY
 from flask import Flask, request, render_template, url_for
-from datetime import datetime
+from datetime import datetime, timezone
 
 def callAPI(latlon = [37.8267,-122.4233]):
     url = "https://api.darksky.net/forecast/{}/{},{}".format(APIKEY.key, latlon[0], latlon[1])
@@ -29,6 +29,7 @@ def my_form_post():
     latlon = getLatLon(location)
     geocodeJson = latlon[2]
     json = callAPI(latlon)
+    json["currently"]["temperature"] = int(round(json["currently"]["temperature"]))
     for forecast in json["daily"]["data"]:
         forecast["temperatureHigh"] = int(round(forecast["temperatureHigh"]))
         forecast["temperatureLow"] = int(round(forecast["temperatureLow"]))
@@ -37,7 +38,11 @@ def my_form_post():
     hourly = json["hourly"]["data"]
     for hourlyForecast in hourly:
         hourlyForecast["temperature"] = int(round(hourlyForecast["temperature"]))
-        hourlyForecast["time"] = datetime.utcfromtimestamp(hourlyForecast["time"]).ctime()        
+        hourlyForecast["time"] = datetime.utcfromtimestamp(hourlyForecast["time"]).replace(tzinfo=timezone.utc).astimezone(tz=None).ctime() 
+        hourlyForecast["time"] = datetime.strptime(hourlyForecast["time"][11:13], "%H").strftime("%I %p")
+        if(hourlyForecast["time"][0] == '0'):
+            hourlyForecast["time"] = hourlyForecast["time"][1:]
+
     icon = url_for('static', filename='{}.png'.format(json["currently"]["icon"]))
     zipped = zip(json["daily"]["data"], range(len(json["daily"]["data"])))
     return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, zipped = zipped, hourly = hourly)
