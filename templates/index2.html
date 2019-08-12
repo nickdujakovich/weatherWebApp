@@ -40,10 +40,20 @@
                     </div>
                     <div class="col">
                             <div class="mt-2 float-right">
-                                        <form method="POST" class="d-inline-flex" style="margin-right: 20px;">
-                                                    <input name="location" class="form-control" placeholder="Enter a location">
-                                                    <button type="submit" class="btn btn-secondary ml-1">Search</button>
-                                        </form>
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                {{geocodeJson["results"][0]["formatted"]}}
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                                    <form method="POST" class="d-inline-flex" >
+                                                            <input name="location" class="form-control" placeholder="Enter a location">                                                          
+                                                            <button type="submit" class="btn btn-secondary ml-1">Search</button>
+                                                </form>
+                                                <div class="dropdown-divider"></div>
+                                                <button class="dropdown-item" type="button">Action</button>
+                                            </div>
+                                          </div>
+                                        
                             </div>
                     </div>
                 </div>
