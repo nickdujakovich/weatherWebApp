@@ -47,6 +47,22 @@
                         <img alt="Bootstrap Image Preview" src="{{ icon }}">
                     </div>
                 </div>
+                <div class="row">
+                <div class="container-fluid hourlyForecast">
+                <div class="row flex-nowrap">
+                    {% for hour in hourly %}
+                    <div class="col">
+                        <div class="row justify-content-center">
+                        {{hour["time"]}}
+                        </div>
+                        <div class="row justify-content-center">
+                            {{hour["temperature"]}}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                </div>
+                </div>
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -68,29 +84,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for item,index in zipped  %}
+                        {% for dailyItem,index in zipped  %}
                         <tr data-toggle="collapse" data-target="#accordion{{index}}" class="clickable">
                             <td>
-                                {{item["time"]}}
+                                {{dailyItem["time"]}}
                             </td>
                             <td>
-                                {{item["temperatureHigh"]}}
+                                {{dailyItem["temperatureHigh"]}}
                             </td>
                             <td>
-                                {{item["temperatureLow"]}}
+                                {{dailyItem["temperatureLow"]}}
                             </td>                          
-                            <td><img alt="Image Preview" src="{{url_for('static', filename='{}.png'.format(item["icon"]))}}">
-                                {{item["summary"]}}
+                            <td><img alt="Image Preview" src="{{url_for('static', filename='{}.png'.format(dailyItem["icon"]))}}">
+                                {{dailyItem["summary"]}}
                             </td>
                             <td>
-                                    {{item["uvIndex"]}}
+                                    {{dailyItem["uvIndex"]}}
                             </td>
                             <tr id="accordion{{index}}" class="collapse row">
-                                <td colspan="5">
-                                <div>
-                                    details
-                                </div>
-                                </td>
+                                
                             </tr>
                         </tr>
                         {% endfor %}
