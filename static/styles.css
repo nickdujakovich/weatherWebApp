@@ -1,14 +1,47 @@
-.hourlyForecast {
-  overflow-x: scroll;
+/* HORIZONTAL SCROLL */
+.hourlyForecast > .row {
+  overflow-x: scroll;  
 }
 
-.hourlyForecast > .row {
-  overflow-x: scroll;
-  
-  
-}
 .hourlyForecast > .row > .col {
   display: inline-block;
   float: none;
-  
+  margin-right: 15px; 
+  margin-left: 15px;
+}
+
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+::-webkit-scrollbar-button {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00faff;
+  border: 1px dashed #3cfaff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #009399;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #008e94;
+}
+::-webkit-scrollbar-track {
+  background: #105d64;
+  border: 1px groove #00d6e1;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #005d64;
+}
+::-webkit-scrollbar-track:active {
+  background: #105d64;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }

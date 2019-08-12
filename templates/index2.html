@@ -54,7 +54,7 @@
                 <div class="container-fluid hourlyForecast">
                 <div class="row flex-nowrap">
                     {% for hour in hourly %}
-                    <div class="col" style="margin-right: 15px; margin-left: 15px;">
+                    <div class="col">
                         <div class="row justify-content-center">
                         {{hour["time"]}}
                         </div>
@@ -114,6 +114,7 @@
             </div>
         </div>
     </div>
+
 
 </body>
 </html>

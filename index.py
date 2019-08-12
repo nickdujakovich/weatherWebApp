@@ -30,6 +30,7 @@ def my_form_post():
     latlon = getLatLon(location)
     geocodeJson = latlon[2]
     json = callAPI(latlon)
+    
     json["currently"]["temperature"] = int(round(json["currently"]["temperature"]))
     for forecast in json["daily"]["data"]:
         forecast["temperatureHigh"] = int(round(forecast["temperatureHigh"]))
@@ -37,6 +38,7 @@ def my_form_post():
         forecast["time"] = pendulum.from_timestamp(forecast["time"], json["timezone"]).to_day_datetime_string()
         forecast["time"] = forecast["time"][:3] + forecast["time"][4:]
         forecast["time"] = forecast["time"].replace(" 12:00 AM", "")
+
     hourly = json["hourly"]["data"]
     for hourlyForecast in hourly:
         hourlyForecast["temperature"] = int(round(hourlyForecast["temperature"]))
