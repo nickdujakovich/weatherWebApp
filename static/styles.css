@@ -1,3 +1,7 @@
+body {
+  background-color: #f7ffff !important;
+}
+
 /* HORIZONTAL SCROLL */
 .hourlyForecast > .row {
   overflow-x: scroll;  
@@ -21,15 +25,15 @@
   height: 7px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #00faff;
-  border: 1px dashed #3cfaff;
+  background: #01abb1;01abb1
+  /*border: 1px dashed #3cfaff;*/
   border-radius: 0px;
 }
-::-webkit-scrollbar-thumb:hover {
+/*::-webkit-scrollbar-thumb:hover {
   background: #009399;
-}
+}*/
 ::-webkit-scrollbar-thumb:active {
-  background: #008e94;
+  background: #00faff;
 }
 ::-webkit-scrollbar-track {
   background: #105d64;
