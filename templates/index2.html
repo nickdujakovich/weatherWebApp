@@ -27,17 +27,15 @@
                                         {{geocodeJson["results"][0]["formatted"]}}
                                     </h1>
                             </td>
-                            <td class="align-text-top" style="padding-left: 5px">
+                            <td class="align-baseline" style="padding-left: 5px">
                                     <p>
                                         {{json["currently"]["temperature"]}}°F
                                     </p>
                             </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h4>
-                                    {{json["currently"]["summary"]}}
-                                </h4>
+                            <td class="align-baseline"  style="padding-left: 5px">
+                                    <h4>
+                                        {{json["currently"]["summary"]}}
+                                    </h4>
                             </td>
                         </tr>
                         </table>
@@ -57,6 +55,9 @@
                         </div>
                         <div class="row justify-content-center">
                             {{hour["temperature"]}}°F
+                        </div>
+                        <div class="row justify-content-center">
+                            <img alt="Image Preview" src="{{url_for('static', filename='{}.png'.format(hour["icon"]))}}">
                         </div>
                     </div>
                     {% endfor %}
@@ -85,7 +86,7 @@
                     </thead>
                     <tbody>
                         {% for dailyItem,index in zipped  %}
-                        <tr data-toggle="collapse" data-target="#accordion{{index}}" class="clickable">
+                        <tr>
                             <td>
                                 {{dailyItem["time"]}}
                             </td>
@@ -101,9 +102,6 @@
                             <td>
                                     {{dailyItem["uvIndex"]}}
                             </td>
-                            <tr id="accordion{{index}}" class="collapse row">
-                                
-                            </tr>
                         </tr>
                         {% endfor %}
                     </tbody>

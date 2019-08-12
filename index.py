@@ -2,6 +2,7 @@ import requests
 import APIKEY
 from flask import Flask, request, render_template, url_for
 from datetime import datetime, timezone
+import pendulum
 
 def callAPI(latlon = [37.8267,-122.4233]):
     url = "https://api.darksky.net/forecast/{}/{},{}".format(APIKEY.key, latlon[0], latlon[1])
@@ -33,12 +34,13 @@ def my_form_post():
     for forecast in json["daily"]["data"]:
         forecast["temperatureHigh"] = int(round(forecast["temperatureHigh"]))
         forecast["temperatureLow"] = int(round(forecast["temperatureLow"]))
-        forecast["time"] = datetime.utcfromtimestamp(forecast["time"]).ctime()
-        forecast["time"] = forecast["time"][:10] + forecast["time"][19:]
+        forecast["time"] = pendulum.from_timestamp(forecast["time"], json["timezone"]).to_day_datetime_string()
+        forecast["time"] = forecast["time"][:3] + forecast["time"][4:]
+        forecast["time"] = forecast["time"].replace(" 12:00 AM", "")
     hourly = json["hourly"]["data"]
     for hourlyForecast in hourly:
         hourlyForecast["temperature"] = int(round(hourlyForecast["temperature"]))
-        hourlyForecast["time"] = datetime.utcfromtimestamp(hourlyForecast["time"]).replace(tzinfo=timezone.utc).astimezone(tz=None).ctime() 
+        hourlyForecast["time"] = pendulum.from_timestamp(hourlyForecast["time"], json["timezone"]).to_datetime_string()
         hourlyForecast["time"] = datetime.strptime(hourlyForecast["time"][11:13], "%H").strftime("%I %p")
         if(hourlyForecast["time"][0] == '0'):
             hourlyForecast["time"] = hourlyForecast["time"][1:]
