@@ -1,5 +1,11 @@
 body {
   background-color: #f7ffff !important;
+  font-family: comforta !important;
+}
+
+@font-face {
+  font-family: comforta;
+  src: url(Comfortaa-Regular.ttf);
 }
 
 /* HORIZONTAL SCROLL */
