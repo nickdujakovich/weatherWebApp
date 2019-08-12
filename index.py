@@ -24,13 +24,19 @@ def hello_world():
     json = callAPI()
     return render_template('index.html', json = json)
 
+locations = []
+
 @app.route('/', methods=['POST'])
 def my_form_post():
     location = request.form['location']
     latlon = getLatLon(location)
     geocodeJson = latlon[2]
+    if geocodeJson["results"][0]["formatted"] not in locations:
+        locations.append(geocodeJson["results"][0]["formatted"])
     json = callAPI(latlon)
     
+
+
     json["currently"]["temperature"] = int(round(json["currently"]["temperature"]))
     for forecast in json["daily"]["data"]:
         forecast["temperatureHigh"] = int(round(forecast["temperatureHigh"]))
@@ -49,7 +55,7 @@ def my_form_post():
 
     icon = url_for('static', filename='{}.png'.format(json["currently"]["icon"]))
     zipped = zip(json["daily"]["data"], range(len(json["daily"]["data"])))
-    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, zipped = zipped, hourly = hourly)
+    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, zipped = zipped, hourly = hourly, locations = locations)
 
 if __name__ == '__main__':
     app.run(debug=True)
