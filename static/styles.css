@@ -20,6 +20,9 @@ body {
   margin-left: 15px;
 }
 
+.dropdown-menu {
+  min-width: 300px !important;
+}
 
 /* CUSTOM SCROLLBAR */
 ::-webkit-scrollbar {
