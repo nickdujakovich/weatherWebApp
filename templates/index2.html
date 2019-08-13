@@ -13,8 +13,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="row mt-3">
-                    <div class="col" style="display: contents; max-width: 80%;">
+                <div class="row justify-content-between mt-3">
+                    <div class="col-auto" style="display: contents; max-width: 80%;">
                         <table>
                         <tr>
                             <td style="padding-left: 20px;" class="align-baseline">
@@ -38,7 +38,7 @@
                         </tr>
                         </table>  
                     </div>
-                    <div class="col">
+                    <div class="col-3">
                             <div class="mt-2 float-right">
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,9 +50,11 @@
                                                             <button type="submit" class="btn btn-secondary ml-1">Search</button>
                                                 </form>
                                                 <div class="dropdown-divider"></div>
-                                                {% for singeLocation in locations %}
-                                                <button class="dropdown-item" type="button">{{singeLocation}}</button>
+                                                <form method="POST">
+                                                {% for singleLocation in locations %}
+                                                    <button class="dropdown-item" type="submit" name="dropdownLocation" value="{{singleLocation}}">{{singleLocation}}</button>
                                                 {% endfor %}
+                                                </form>
                                             </div>
                                           </div>
                                         
@@ -99,7 +101,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for dailyItem,index in zipped  %}
+                        {% for dailyItem in json["daily"]["data"]  %}
                         <tr>
                             <td>
                                 {{dailyItem["time"]}}

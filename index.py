@@ -28,9 +28,14 @@ locations = []
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    location = request.form['location']
+    location = request.form.get('location', None)
+    for dropdownLocation in locations:
+        if(request.form.get('dropdownLocation', None) == dropdownLocation):
+            location = dropdownLocation          
     latlon = getLatLon(location)
     geocodeJson = latlon[2]
+    if(len(geocodeJson["results"][0]["formatted"]) > 39):
+        geocodeJson["results"][0]["formatted"] = geocodeJson["results"][0]["formatted"][:39] + "..."
     if geocodeJson["results"][0]["formatted"] not in locations:
         locations.append(geocodeJson["results"][0]["formatted"])
     json = callAPI(latlon)
@@ -54,8 +59,7 @@ def my_form_post():
             hourlyForecast["time"] = hourlyForecast["time"][1:]
 
     icon = url_for('static', filename='{}.png'.format(json["currently"]["icon"]))
-    zipped = zip(json["daily"]["data"], range(len(json["daily"]["data"])))
-    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, zipped = zipped, hourly = hourly, locations = locations)
+    return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, hourly = hourly, locations = locations)
 
 if __name__ == '__main__':
     app.run(debug=True)
