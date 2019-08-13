@@ -31,9 +31,15 @@ def my_form_post():
     location = request.form.get('location', None)
     for dropdownLocation in locations:
         if(request.form.get('dropdownLocation', None) == dropdownLocation):
+<<<<<<< HEAD
             location = dropdownLocation
+=======
+            location = dropdownLocation          
+>>>>>>> 4cec80251f0cb9c97b0b3523b34a2faedfd49211
     latlon = getLatLon(location)
     geocodeJson = latlon[2]
+    if(len(geocodeJson["results"][0]["formatted"]) > 39):
+        geocodeJson["results"][0]["formatted"] = geocodeJson["results"][0]["formatted"][:39] + "..."
     if geocodeJson["results"][0]["formatted"] not in locations:
         locations.append(geocodeJson["results"][0]["formatted"])
     json = callAPI(latlon)
