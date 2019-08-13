@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import requests
 import APIKEY
 from flask import Flask, request, render_template, url_for
@@ -66,7 +65,3 @@ if __name__ == '__main__':
     app.run(debug=True)
 
     
-=======
-hello 
-nick
->>>>>>> d2774f571c4639c5d305572a3dbd1b443acb970c
