@@ -1,5 +1,6 @@
 body {
-  background-color: #f7ffff !important;
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(233,255,255,1) 74%, rgba(159,255,254,1) 98%, rgba(95,249,255,1) 100%) !important;
   font-family: comforta !important;
 }
 
