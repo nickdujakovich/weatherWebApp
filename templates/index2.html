@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/styles.css">
+        <!--<link rel="stylesheet" href="/static/styles.css">-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+<body>
+    
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row mt-3">
+                    <div class="col" style="display: contents; max-width: 80%;">
+                        <table>
+                        <tr>
+                            <td style="padding-left: 20px;" class="align-baseline">
+                                    <h1>
+                                        {{geocodeJson["results"][0]["formatted"]}}
+                                    </h1>
+                            </td>
+                            <td class="align-baseline" style="padding-left: 5px">
+                                    <p>
+                                        {{json["currently"]["temperature"]}}°F
+                                    </p>
+                            </td>
+                            <td class="align-baseline"  style="padding-left: 5px">
+                                    <h4>
+                                        {{json["currently"]["summary"]}}
+                                    </h4>
+                            </td>
+                            <td>
+                                <img alt="Bootstrap Image Preview" src="{{ icon }}">
+                            </td>
+                        </tr>
+                        </table>  
+                    </div>
+                    <div class="col">
+                            <div class="mt-2 float-right">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                {{geocodeJson["results"][0]["formatted"]}}
+                                            </button>
+                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                                    <form method="POST" class="d-inline-flex w-100" style="padding: 0 10px 0 10px; margin-block-end: 0em; ">
+                                                            <input name="location" class="form-control" placeholder="Enter a location">                                                          
+                                                            <button type="submit" class="btn btn-secondary ml-1">Search</button>
+                                                </form>
+                                                <div class="dropdown-divider"></div>
+                                                {% for singeLocation in locations %}
+                                                <button class="dropdown-item" type="button">{{singeLocation}}</button>
+                                                {% endfor %}
+                                            </div>
+                                          </div>
+                                        
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="container-fluid hourlyForecast">
+                <div class="row flex-nowrap slid">
+                    {% for hour in hourly %}
+                    <div class="col">
+                        <div class="row justify-content-center">
+                        {{hour["time"]}}
+                        </div>
+                        <div class="row justify-content-center">
+                            {{hour["temperature"]}}°F
+                        </div>
+                        <div class="row justify-content-center">
+                            <img alt="Image Preview" src="{{url_for('static', filename='{}.png'.format(hour["icon"]))}}">
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                </div>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>
+                                Date
+                            </th>
+                            <th>
+                                High Temp (°F)
+                            </th>
+                            <th>
+                                Low Temp (°F)
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                UV Index
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for dailyItem,index in zipped  %}
+                        <tr>
+                            <td>
+                                {{dailyItem["time"]}}
+                            </td>
+                            <td>
+                                {{dailyItem["temperatureHigh"]}}
+                            </td>
+                            <td>
+                                {{dailyItem["temperatureLow"]}}
+                            </td>                          
+                            <td><img alt="Image Preview" src="{{url_for('static', filename='{}.png'.format(dailyItem["icon"]))}}">
+                                {{dailyItem["summary"]}}
+                            </td>
+                            <td>
+                                    {{dailyItem["uvIndex"]}}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+const slider = document.querySelector('.slid');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener('mouseleave', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mouseup', () => {
+  isDown = false;
+  slider.classList.remove('active');
+});
+slider.addEventListener('mousemove', (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 1.5; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+  console.log(walk);
+});
+</script>
+
+</html>
