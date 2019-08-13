@@ -50,9 +50,11 @@
                                                             <button type="submit" class="btn btn-secondary ml-1">Search</button>
                                                 </form>
                                                 <div class="dropdown-divider"></div>
-                                                {% for singeLocation in locations %}
-                                                <button class="dropdown-item" type="button">{{singeLocation}}</button>
+                                                <form method="POST">
+                                                {% for singleLocation in locations %}
+                                                <button class="dropdown-item" type="submit" name="dropdownLocation" value="{{singleLocation}}">{{singleLocation}}</button>
                                                 {% endfor %}
+                                                </form>
                                             </div>
                                           </div>
                                         
@@ -99,7 +101,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for dailyItem,index in zipped  %}
+                        {% for dailyItem in json["daily"]["data"]  %}
                         <tr>
                             <td>
                                 {{dailyItem["time"]}}
