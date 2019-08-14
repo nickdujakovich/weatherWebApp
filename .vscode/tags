@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+APIKEY	../index.py	/^import APIKEY$/;"	kind:namespace	line:2
+APIKEY.py	../APIKEY.py	1;"	kind:file	line:1
+Flask	../index.py	/^from flask import Flask, request, render_template, url_for$/;"	kind:namespace	line:3
+app	../index.py	/^app = Flask(__name__)$/;"	kind:variable	line:23
+callAPI	../index.py	/^def callAPI(latlon = [37.8267,-122.4233]):$/;"	kind:function	line:9
+datetime	../index.py	/^from datetime import datetime, timezone$/;"	kind:namespace	line:4
+geocodeKey	../APIKEY.py	/^geocodeKey = "41bf33fd677d4a408022a1db7a82a68e"/;"	kind:variable	line:2
+getLatLon	../index.py	/^def getLatLon(location):$/;"	kind:function	line:15
+hello_world	../index.py	/^def hello_world():$/;"	kind:function	line:25
+index.py	../index.py	1;"	kind:file	line:1
+key	../APIKEY.py	/^key = "85dcd617dfd6ceeb09f95dbeb6a8a766"$/;"	kind:variable	line:1
+locations	../index.py	/^locations = []$/;"	kind:variable	line:7
+my_form_post	../index.py	/^def my_form_post():$/;"	kind:function	line:30
+pendulum	../index.py	/^import pendulum$/;"	kind:namespace	line:5
+render_template	../index.py	/^from flask import Flask, request, render_template, url_for$/;"	kind:namespace	line:3
+request	../index.py	/^from flask import Flask, request, render_template, url_for$/;"	kind:namespace	line:3
+requests	../index.py	/^import requests$/;"	kind:namespace	line:1
+timezone	../index.py	/^from datetime import datetime, timezone$/;"	kind:namespace	line:4
+url_for	../index.py	/^from flask import Flask, request, render_template, url_for$/;"	kind:namespace	line:3
