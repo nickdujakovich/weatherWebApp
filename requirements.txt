@@ -40,7 +40,6 @@ pybaseball==1.0.8
 pycosat==0.6.3
 pycparser==2.19
 pyee==6.0.0
-pyodbc==4.0.26
 pyOpenSSL==18.0.0
 pyppeteer==0.0.25
 pyquery==1.4.0
