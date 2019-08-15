@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 appdirs==1.4.3
 asn1crypto==0.24.0
 attrs==19.1.0
@@ -59,3 +60,21 @@ urllib3==1.24.1
 w3lib==1.20.0
 websockets==8.0.1
 Werkzeug==0.15.4
+=======
+certifi==2019.6.16
+chardet==3.0.4
+Click==7.0
+Flask==1.1.1
+gunicorn==19.9.0
+idna==2.8
+itsdangerous==1.1.0
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+pendulum==2.0.5
+python-dateutil==2.8.0
+pytzdata==2019.2
+requests==2.22.0
+six==1.12.0
+urllib3==1.25.3
+Werkzeug==0.15.5
+>>>>>>> 8509deb9b55775cd0a13ca55bca3149ea8e1d970
