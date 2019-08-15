@@ -4,6 +4,8 @@ from flask import Flask, request, render_template, url_for
 from datetime import datetime, timezone
 import pendulum
 
+locations = []
+
 def callAPI(latlon = [37.8267,-122.4233]):
     url = "https://api.darksky.net/forecast/{}/{},{}".format(APIKEY.key, latlon[0], latlon[1])
     r = requests.get(url)
@@ -23,8 +25,6 @@ app = Flask(__name__)
 def hello_world():
     json = callAPI()
     return render_template('index.html', json = json)
-
-locations = []
 
 @app.route('/', methods=['POST'])
 def my_form_post():
@@ -57,6 +57,12 @@ def my_form_post():
 
     icon = url_for('static', filename='{}.png'.format(json["currently"]["icon"]))
     return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, hourly = hourly, locations = locations)
+@app.route('/login', methods=["POST","GET"])
+def my_user_name():
+    password = None
+    if request.method is "POST":
+        password = request.form.get('password', None)
+    return render_template("index3.html", password = password)
 
 if __name__ == '__main__':
     app.run(debug=True)
