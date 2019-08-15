@@ -1,2 +1,0 @@
-key = "38266a6772dca3beed6183a9f5504832"
-geocodeKey = "7e936d91a5254a879e0bd4203c036fe5"
