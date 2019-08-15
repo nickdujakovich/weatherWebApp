@@ -1,16 +1,13 @@
 import os
 import requests
-#import APIKEY
+import APIKEY
 from flask import Flask, request, render_template, url_for, session
 from flask_session import Session
 from datetime import datetime, timezone
 import pendulum
 
 app = Flask(__name__)
-# Check Configuration section for more details
-SESSION_TYPE = 'filesystem'
-app.config.from_object(__name__)
-Session(app)
+
 
 locations = []
 
@@ -73,6 +70,6 @@ def my_form_post():
     return render_template('index2.html', json = json, location = location, geocodeJson = geocodeJson, icon = icon, hourly = hourly, locations = locations)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True,threaded=True)
 
     
