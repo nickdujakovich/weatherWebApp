@@ -1,9 +1,16 @@
 import os
 import requests
 #import APIKEY
-from flask import Flask, request, render_template, url_for
+from flask import Flask, request, render_template, url_for, session
+from flask_session import Session
 from datetime import datetime, timezone
 import pendulum
+
+app = Flask(__name__)
+# Check Configuration section for more details
+SESSION_TYPE = 'filesystem'
+app.config.from_object(__name__)
+Session(app)
 
 locations = []
 
@@ -24,7 +31,7 @@ def getLatLon(location):
     lon = json["results"][0]["geometry"]["lng"]
     return [lat,lon, json]
 
-app = Flask(__name__)
+
 @app.route('/')
 def hello_world():
     json = callAPI()
