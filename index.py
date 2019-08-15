@@ -1,3 +1,4 @@
+import os
 import requests
 import APIKEY
 from flask import Flask, request, render_template, url_for
@@ -6,14 +7,17 @@ import pendulum
 
 locations = []
 
+darkSkyKey = os.environ.get('darkSkyKey')
+openCageDataKey = os.environ.get('openCageDataKey')
+
 def callAPI(latlon = [37.8267,-122.4233]):
-    url = "https://api.darksky.net/forecast/{}/{},{}".format(APIKEY.key, latlon[0], latlon[1])
+    url = "https://api.darksky.net/forecast/{}/{},{}".format(darkSkyKey, latlon[0], latlon[1])
     r = requests.get(url)
     json = r.json()
     return json
 
 def getLatLon(location):
-    url = "https://api.opencagedata.com/geocode/v1/json?q={}&key={}".format(location,APIKEY.geocodeKey)
+    url = "https://api.opencagedata.com/geocode/v1/json?q={}&key={}".format(location,openCageDataKey)
     r = requests.get(url)
     json = r.json()
     lat = json["results"][0]["geometry"]["lat"]
