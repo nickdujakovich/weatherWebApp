@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
 appdirs==1.4.3
 asn1crypto==0.24.0
 attrs==19.1.0
@@ -60,6 +63,7 @@ urllib3==1.24.1
 w3lib==1.20.0
 websockets==8.0.1
 Werkzeug==0.15.4
+<<<<<<< HEAD
 =======
 certifi==2019.6.16
 chardet==3.0.4
@@ -78,3 +82,5 @@ six==1.12.0
 urllib3==1.25.3
 Werkzeug==0.15.5
 >>>>>>> 8509deb9b55775cd0a13ca55bca3149ea8e1d970
+=======
+>>>>>>> master
